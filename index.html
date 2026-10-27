@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Made for Sejal ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Georgia,serif;
+  background:linear-gradient(135deg,#240016,#710b36,#ed799e);
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+main{padding:50px 20px;max-width:600px;margin:auto}
+.heart{font-size:65px;animation:beat 1s infinite}
+h1{font-size:38px;color:#ffd4e2}
+p{line-height:1.8}
+.card{
+  background:#ffffff18;
+  border:1px solid #ffffff50;
+  border-radius:22px;
+  padding:24px;
+  margin:25px 0;
+  box-shadow:0 8px 25px #0003;
+}
+button{
+  background:#ffb6cc;color:#590a2c;
+  border:0;border-radius:30px;
+  padding:14px 22px;font-size:16px;
+  margin:8px;cursor:pointer;
+}
+#secret{display:none;font-size:18px;color:#ffe0ea}
+footer{padding:25px;color:#ffd4e2}
+@keyframes beat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+}
+.floating{
+ position:fixed;bottom:-30px;
+ animation:rise 7s linear infinite;
+ pointer-events:none;
+}
+@keyframes rise{
+ to{transform:translateY(-110vh) rotate(30deg);opacity:0}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="heart">❤️</div>
+  <h1>Made for Sejal 🎀</h1>
+  <p>A little corner of the internet, made just for you.</p>  <div class="card">
+    <h2>Dear Sejal 💌</h2>
+    <p>
+      If I could give you one thing in this world,
+      it would be the ability to see yourself through
+      my eyes. Then you would understand how special
+      you are to me. ❤️
+    </p>
+  </div>  <div class="card">
+    <h2>My favourite person 🌙</h2>
+    <p>You make ordinary moments feel special.
+    Your smile can brighten even my simplest days.</p>
+    <p>I'm so glad our paths crossed. 🫶</p>
+  </div>  <div class="card">
+    <h2>A little surprise 🎁</h2>
+    <p>There's something I want you to know...</p>
+    <button onclick="document.getElementById('secret').style.display='block';this.style.display='none'">
+      Open my heart ❤️
+    </button>
+    <p id="secret">
+      Sejal, you are someone truly special to me.
+      Thank you for being a beautiful part of my world.
+      Here's a little reminder that you are appreciated,
+      today and every day. 💖
+    </p>
+  </div>  <footer>Made with love, just for Sejal ♾️❤️</footer>
+</main>
+<script>
+const emojis=["❤️","💕","💗","💖","🌸"];
+setInterval(()=>{
+ const h=document.createElement("div");
+ h.className="floating";
+ h.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(18+Math.random()*20)+"px";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),7000);
+},500);
+</script>
+</body>
+  </html>
